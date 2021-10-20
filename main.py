@@ -1,14 +1,15 @@
+from os import write
 import requests
 from bs4 import BeautifulSoup
-from time import time
 from threading import Thread
 from os.path import exists
 
 
 THESAURUS_BASE_URL = 'https://www.thesaurus.com/browse'
 USERNAME_CHECKER_BASE_URL = 'https://instausername.com/availability?q='
-SYNONYMS_FILE = 'synonyms.txt'
-UTILIZED_FILE = 'utilized.txt'
+SYNONYMS_FILE = None
+UTILIZED_FILE = None
+UNIQUE_SYNONYMS_FILE = None
 USERNAME_MAX_LENGTH = 30
 
 
@@ -36,20 +37,25 @@ def generate_potential_usernames():
 
 
 def generate_keywords_using_synonyms(seed):
-  global SYNONYMS_FILE, UTILIZED_FILE
+  global SYNONYMS_FILE, UTILIZED_FILE, UNIQUE_SYNONYMS_FILE
 
   synonyms_file = f'data/{seed}_synonyms.txt'
   utilized_file = f'data/{seed}_utilized.txt'
+  unique_synonyms_file = f'data/{seed}_unique_synonyms.txt'
 
-  if exists(synonyms_file) or exists(utilized_file):
+  if exists(synonyms_file) \
+    or exists(utilized_file) \
+      or exists(unique_synonyms_file):
     print(f'Already have files for seed word: {seed}')
     return
 
   create_file(synonyms_file)
   create_file(utilized_file)
+  create_file(unique_synonyms_file)
 
   SYNONYMS_FILE = synonyms_file
   UTILIZED_FILE = utilized_file
+  UNIQUE_SYNONYMS_FILE = unique_synonyms_file
 
   depth = 2
   i = 0
@@ -65,6 +71,8 @@ def generate_keywords_using_synonyms(seed):
 
     run_concurrently_using_threads(fns_args)
     i += 1
+  
+  build_unique_synonyms_file()
 
 
 def find_and_add_synonyms_to_global(word):
@@ -95,6 +103,14 @@ def find_synonyms(word):
     print(f'already utilized: {word}')
     return []
 
+
+def build_unique_synonyms_file():
+  synonyms = get_from_synonyms()
+  unique_synonyms = list(set(synonyms))
+
+  with open(UNIQUE_SYNONYMS_FILE, 'a') as f:
+    for unique_synonym in unique_synonyms:
+      f.write(f'{unique_synonym}\n')
 
 def get_from_synonyms():
   data = get_from_file(SYNONYMS_FILE)
@@ -137,3 +153,5 @@ def generate_unique_file():
 
 if __name__ == '__main__':
   generate_keywords_using_synonyms('money')
+  generate_keywords_using_synonyms('dollar')
+  generate_keywords_using_synonyms('great')
