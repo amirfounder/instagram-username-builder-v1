@@ -1,0 +1,629 @@
+money
+money
+money
+bill 
+cash 
+bill 
+cash 
+capital 
+capital 
+check 
+fund 
+bill 
+check 
+capital 
+check 
+pay 
+payment 
+property 
+cash 
+salary 
+payment 
+fund 
+wage 
+property 
+salary 
+wealth 
+property 
+fund 
+payment 
+pay 
+wage 
+salary 
+banknote 
+banknote 
+bankroll 
+wealth 
+wage 
+chips 
+coin 
+bankroll 
+l 
+banknote 
+bread 
+bread 
+dough 
+coinage 
+chips 
+chips 
+coin 
+bread 
+finances 
+coinage 
+coinage 
+funds 
+coin 
+gold 
+finances 
+funds 
+gold 
+gravy 
+loot 
+greenback 
+pesos 
+gravy 
+gold 
+ 
+riches 
+resources 
+gravy 
+pesos 
+greenback 
+loot 
+pesos 
+resources 
+roll 
+resources 
+silver 
+specie 
+riches 
+loot 
+roll 
+roll 
+riches 
+specie 
+wad 
+silver 
+wherewithal 
+silver 
+treasure 
+treasure 
+specie 
+almighty dollar 
+wherewithal 
+hard cash 
+treasure 
+hard cash 
+legal tender 
+legal tender 
+almighty dollar 
+legal tender 
+medium of exchange 
+medium of exchange 
+medium of exchange 
+hard cash 
+investment 
+note 
+buck 
+currency 
+currency 
+debt 
+IOU 
+foundation 
+endowment 
+buck 
+statement 
+note 
+stock 
+debt 
+statement 
+debt 
+statement 
+supply 
+investment 
+note 
+note 
+analysis 
+chit 
+IOU 
+damage 
+treasury 
+audit 
+central 
+note 
+IOU 
+refund 
+reserve 
+trust 
+earnings 
+security 
+basic 
+equity 
+checkup 
+fee 
+armamentarium 
+allowance 
+estate 
+farm 
+cardinal 
+income 
+compensation 
+invoice 
+conduct 
+cardinal 
+hoard 
+amount 
+control 
+reckoning 
+amount 
+award 
+do 
+profit 
+inventory 
+knock 
+inquiry 
+chief 
+kitty 
+goods 
+fulfill 
+score 
+investigation 
+research 
+make 
+dominant 
+chief 
+dominant 
+first 
+deposit 
+home 
+bullion 
+mine 
+pool 
+deposit 
+fundamental 
+reimbursement 
+house 
+payroll 
+practice 
+abundance 
+prosecute 
+review 
+reservoir 
+cabbage 
+remuneration 
+affluence 
+disbursement 
+disbursement 
+reward 
+land 
+leading 
+source 
+prosperity 
+stipend 
+pursue 
+dinero 
+test 
+stipend 
+bacon 
+ownership 
+store 
+outlay 
+tab 
+major 
+plot 
+tab 
+poll 
+primary 
+pension 
+bad news 
+bad news 
+undertake 
+emolument 
+rein 
+storehouse 
+commission 
+vein 
+tract 
+revenue 
+prime 
+pension 
+scrutiny 
+itemized account 
+hire 
+lot 
+funded
+carry out 
+premium 
+consideration 
+richness 
+principal 
+premium 
+checked
+controlling 
+engage in 
+request for payment 
+statement of indebtedness 
+pledge 
+funding
+proceed with 
+defrayment 
+checking
+worth 
+worth 
+foremost 
+important 
+waged
+remittance 
+recompense 
+funds
+number one 
+billed
+reparation 
+honorarium 
+assets 
+ of indebtedness 
+assets 
+acreage 
+acres 
+wages
+belongings 
+bounty 
+indemnity 
+outstanding 
+belongings 
+waging
+billing
+repayment 
+overruling 
+clover 
+cache 
+buildings 
+restitution 
+meed 
+paramount 
+savings 
+scale 
+savings 
+bills
+take 
+scratch 
+return 
+perquisite 
+predominant 
+chattels 
+wampum 
+scratch 
+claim 
+commodities 
+pittance 
+wages 
+chicken feed 
+dominion 
+preeminent 
+settlement 
+proceeds 
+chicken feed 
+prominent 
+copiousness 
+green stuff 
+take-home 
+effects 
+finance 
+subsidy 
+subsidize 
+freehold 
+redress 
+mazumah 
+underlying 
+cornucopia 
+sum 
+holdings 
+back 
+salaries
+capitalize 
+support 
+acquittal 
+vital 
+fortune 
+inheritance 
+grubstake 
+advance 
+means 
+ready assets 
+stake 
+alimony 
+requital 
+adventurous 
+amends 
+premises 
+bankrolled
+audacious 
+lettuce 
+markers 
+aliment 
+amortization 
+coining 
+proprietary 
+markers 
+beans 
+bold 
+annuity 
+satisfaction 
+comestibles 
+comestibles 
+courageous 
+play money 
+proprietorship 
+realty 
+lucre 
+defrayal 
+h 
+boodle 
+luxuriance 
+change 
+diet 
+copper 
+daring 
+substance 
+doubloon 
+change 
+luxury 
+fare 
+diet 
+fearless 
+title 
+discharge 
+feed 
+jack 
+grub 
+down 
+possessorship 
+indemnification 
+mintage 
+takings 
+properties
+gallant 
+clams 
+part 
+recompensation 
+opulence 
+gritty 
+ 
+portion 
+money 
+necessities 
+necessities 
+stipendium 
+heroic 
+pelf 
+balance sheet 
+piece 
+chin-up 
+nourishment 
+nourishment 
+quittance 
+paid
+plenitude 
+moola 
+nurture 
+nurture 
+paying
+nutriment 
+nutriment 
+plenty 
+chivalrous 
+possessions 
+affairs 
+provender 
+confident 
+meter money 
+provender 
+profusion 
+budget 
+dashing 
+provisions 
+provisions 
+dauntless 
+small change 
+defiant 
+condition 
+shingle 
+shingle 
+coined
+substantiality 
+doughty 
+net 
+subsistence 
+subsistence 
+sustenance 
+velvet 
+net worth 
+sustenance 
+firm 
+retaliation 
+viands 
+viands 
+pay-off 
+victuals 
+lap of luxury 
+foolhardy 
+victuals 
+viands 
+bed and board 
+fortitudinous 
+long green 
+victuals 
+paying 
+bed and board 
+bed and board 
+backing 
+prosperousness 
+forward 
+payments
+staff of life 
+staff of life 
+staff of life 
+stocks and bonds 
+collateral 
+game 
+hardy 
+herolike 
+indomitable 
+imprudent 
+gilt 
+intrepid 
+halcyon 
+aureate 
+aurelian 
+nut 
+auric 
+profits 
+auriferous 
+aurous 
+securities 
+gilded 
+golds
+stuff 
+winnings 
+dressing 
+juice 
+accounts receivable 
+fluid assets 
+money on hand 
+booty 
+spoils 
+money in the bank 
+graft 
+haul 
+bank note 
+nest egg 
+petty cash 
+paper money 
+lift 
+pickings 
+pork barrel 
+ready money 
+plunder 
+pillage 
+plunderage 
+rich
+prize 
+looted
+looting
+seizure 
+basics 
+hot goods 
+squeeze 
+sock 
+bright 
+reserves 
+basics 
+silvery 
+cycle 
+species
+white 
+gyration 
+cycle 
+argent 
+reel 
+pale 
+supplies 
+plated 
+supplies 
+supplies 
+ace in hole 
+pearly 
+revolution 
+material goods 
+revolution 
+silvered 
+sterling 
+rotation 
+material goods 
+ace in hole 
+rotation 
+revolution 
+ace in hole 
+run 
+the goods 
+bundle 
+the goods 
+argentate 
+spin 
+chunk 
+lustrous 
+ways and means 
+spin 
+trundling 
+clump 
+resplendent 
+turn 
+ways and means 
+trundling 
+lump 
+twirl 
+turn 
+undulation 
+twirl 
+whirl 
+block 
+turn 
+undulation 
+twirl 
+bunch 
+packet 
+rolled
+cushion 
+rolled
+rolling
+gathering 
+financing 
+heap 
+rolling
+rolling
+hunk 
+lining 
+gem 
+mint 
+mass 
+jewel 
+valuable 
+catch 
+nugget 
+jewel 
+find 
+pot 
+pad 
+darling 
+pile 
+plug 
+cash on the barrelhead 
+nonpareil 
+cash on the barrelhead 
+tuft 
+ream 
+slew 
+paragon 
+darling 
+circulating medium 
+pearl 
+honest money 
+wadding 
+circulating medium 
+apple of one's eye 
+pearl 
+plum 
+honest money 
+plum 
+sound currency 
+pride and joy 
+valid currency 
+sound currency 
+valid currency 
+apple of one's eye 
+treasure trove 
+treasures
+pride and joy 
+treasured
+treasured
+treasured
