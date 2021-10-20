@@ -22,6 +22,13 @@ Goals:
 
 `python main.py`
 
+# TODO
+
+All of these are nice-to-haves, but not necessary for program utilization:
+
+- logging
+- method to safe-build directory
+
 # Dev details
 
 ## File Structure
