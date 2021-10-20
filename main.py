@@ -1,7 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 from threading import Thread
-from os.path import exists
+from os.path import exists, isdir
+from os import mkdir
 
 
 THESAURUS_BASE_URL = 'https://www.thesaurus.com/browse'
@@ -36,6 +37,9 @@ def generate_potential_usernames():
 
 def generate_keywords_using_synonyms(seed):
   global SYNONYMS_FILE, UTILIZED_FILE, UNIQUE_SYNONYMS_FILE
+
+  if not isdir('data'):
+    mkdir('data')
 
   synonyms_file = f'data/{seed}_synonyms.txt'
   utilized_file = f'data/{seed}_utilized.txt'
