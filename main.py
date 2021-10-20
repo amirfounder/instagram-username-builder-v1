@@ -1,4 +1,3 @@
-from os import write
 import requests
 from bs4 import BeautifulSoup
 from threading import Thread
@@ -34,7 +33,6 @@ def check_username_availability(username):
 
 def generate_potential_usernames():
   pass
-
 
 def generate_keywords_using_synonyms(seed):
   global SYNONYMS_FILE, UTILIZED_FILE, UNIQUE_SYNONYMS_FILE
