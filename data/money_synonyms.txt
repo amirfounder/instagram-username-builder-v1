@@ -1,0 +1,535 @@
+money
+bill 
+capital 
+cash 
+check 
+fund 
+pay 
+payment 
+property 
+salary 
+wage 
+wealth 
+banknote 
+bankroll 
+bread 
+chips 
+coin 
+coinage 
+dough 
+finances 
+funds 
+gold 
+gravy 
+greenback 
+loot 
+pesos 
+resources 
+riches 
+roll 
+silver 
+specie 
+treasure 
+wad 
+wherewithal 
+almighty dollar 
+hard cash 
+legal tender 
+medium of exchange 
+endowment 
+amount 
+buck 
+award 
+foundation 
+analysis 
+stock 
+currency 
+deposit 
+debt 
+supply 
+central 
+audit 
+investment 
+note 
+disbursement 
+basic 
+treasury 
+note 
+allowance 
+checkup 
+cardinal 
+statement 
+compensation 
+fee 
+refund 
+chief 
+control 
+trust 
+IOU 
+outlay 
+dominant 
+fee 
+inquiry 
+reserve 
+chit 
+pension 
+security 
+armamentarium 
+investigation 
+first 
+damage 
+premium 
+invoice 
+income 
+research 
+hoard 
+profit 
+refund 
+knock 
+fundamental 
+review 
+stock 
+earnings 
+assets 
+reimbursement 
+test 
+reimbursement 
+reckoning 
+fee 
+inventory 
+backing 
+supply 
+remuneration 
+poll 
+bullion 
+leading 
+remittance 
+cabbage 
+basics 
+aliment 
+cabbage 
+reward 
+major 
+rein 
+score 
+mine 
+lettuce 
+stipend 
+reparation 
+beans 
+comestibles 
+dinero 
+tab 
+income 
+boodle 
+primary 
+repayment 
+abundance 
+lot 
+scrutiny 
+restitution 
+diet 
+pool 
+prime 
+change 
+belongings 
+affluence 
+payroll 
+checked
+fare 
+reservoir 
+bad news 
+bacon 
+pledge 
+prosperity 
+feed 
+return 
+finance 
+abundance 
+stipend 
+change 
+grub 
+checking
+markers 
+clams 
+principal 
+source 
+richness 
+budget 
+scratch 
+commission 
+reward 
+species
+ 
+currency 
+necessities 
+revenue 
+collateral 
+itemized account 
+principal 
+subsidize 
+bacon 
+copper 
+or payment 
+gilt 
+remuneration 
+consideration 
+play money 
+emolument 
+controlling 
+effects 
+back 
+settlement 
+currency 
+currency 
+circulating medium 
+money 
+statement of indebtedness 
+capitalize 
+nourishment 
+richness 
+
+holdings 
+assets 
+halcyon 
+savings 
+store booty 
+subsidy 
+doubloon 
+dinero 
+foremost 
+hire 
+
+currency 
+clover 
+cold cash 
+sum 
+storehouse 
+billed
+se 
+nurture 
+income 
+ 
+jack 
+bank note 
+support 
+vein 
+fortune 
+stake 
+t 
+scratch 
+paper money 
+aurelian 
+honorarium 
+mintage 
+bundle 
+balance sheet 
+spoils 
+funded
+
+chunk 
+money 
+affluence 
+kitty 
+indemnity 
+cash on the barrelhead 
+clump 
+wampum 
+means 
+cache 
+juice 
+assets 
+bills
+worth 
+number one 
+assets 
+funding
+remuneration 
+meed 
+nutriment 
+coining 
+affairs 
+auric 
+cold cash 
+assets 
+eed 
+acquittal 
+backing 
+perquisite 
+graft 
+gem 
+funds
+advance 
+opulence 
+means 
+assets 
+bright 
+scale 
+lump 
+auriferobelongings 
+belongings 
+green stuff 
+conduct 
+bankrolled
+provender 
+outstanding 
+cycle 
+plenty 
+packet 
+silvery 
+financing 
+pittance 
+jewel 
+circulating medium 
+budget 
+nut 
+bounty 
+mazumah 
+gyration scratch 
+provisions 
+take 
+money 
+overruling 
+amends 
+means 
+cache 
+lift 
+cold cash 
+substance 
+farm 
+reserves 
+collateral 
+back 
+ 
+proceeds 
+argent 
+ready assets 
+chicken feed 
+make 
+condition 
+clover 
+wages 
+prize 
+paramount 
+revolution 
+revenue 
+
+golds
+worth 
+pale 
+block 
+currency 
+goods 
+commodities 
+fulfill 
+annuity 
+
+money 
+subsistence 
+pearly 
+take-home 
+money 
+predominant 
+meter money 
+earnings 
+lap of luxury 
+revenue 
+savings 
+valuable 
+copiousness 
+recompense 
+home 
+salaries
+rotation 
+pickings 
+honest money 
+plated 
+sustenance 
+make 
+preeminent 
+finance 
+bounty 
+rich
+abundance 
+money 
+
+small change 
+run 
+viands 
+redress 
+sock 
+d 
+cornucopia 
+house 
+prominent 
+practice 
+bunch 
+kitty 
+net worth 
+victuals 
+catch 
+on 
+y 
+plunder 
+land 
+spin 
+ing 
+defrayal 
+sterling 
+prosecute 
+cushion 
+bed and board 
+plunderage 
+supplies 
+ownership 
+valid currency 
+defrayment 
+darling 
+
+lucre 
+argentate 
+fortune 
+prize 
+vital 
+fortune 
+ace in hole 
+discharge 
+staff of life 
+requital 
+pursue 
+lustrous 
+find 
+turn 
+gathering 
+down 
+plot 
+means 
+seizure 
+return 
+undertake 
+goods 
+twirl fortune 
+tract 
+material goods 
+heap 
+resplendent 
+money 
+carry out 
+hoard 
+satisfaction 
+hoard 
+worth 
+indemnification 
+hunk 
+undulation 
+nut 
+
+take 
+nonpareil 
+the goods 
+engage in 
+acreage 
+lining 
+part 
+s 
+whirl 
+paragon 
+hot goods 
+possessions 
+settlement 
+proceed with 
+ways and means 
+rolled
+acres 
+pearl 
+lucre 
+portion 
+mass 
+waged
+takings 
+looted
+proceeds 
+rolling
+assets 
+quittance 
+luxuriance 
+pile 
+mint 
+profits 
+wages 
+reckoning 
+wages
+belongings 
+luxury 
+plum 
+revenue 
+waging
+recompensation 
+nugget 
+buildings 
+recompense 
+richness 
+savings 
+chattels 
+stipendium 
+pad 
+opulence 
+scratch 
+dominion 
+pile 
+take-home 
+remuneration 
+apple of one's eye 
+securities 
+effects 
+paid
+requital 
+plenitude 
+plug 
+nest egg 
+store 
+freehold 
+paying
+retaliation 
+plenty 
+stuff 
+pot 
+pride and joy 
+holdings 
+possessions 
+substance 
+treasure trove 
+pay-off 
+ream 
+inheritance 
+winnings 
+paying 
+profusion 
+treasured
+slew 
+means 
+accounts receivable 
+payments
+store 
+stuff 
+premises 
+treasures
+fluid assets 
+tuft 
+ce 
+money in the bank 
+substantiality 
+money on hand 
+
+velvet 
+realty 
+nest egg 
+lap of luxury 
+petty cash 
+long green 
+pork barrel 
+prosperousness 
+ready money 
+
+stocks and bonds 
+properties

@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from time import time
 from threading import Thread
+from os.path import exists
 
 
 THESAURUS_BASE_URL = 'https://www.thesaurus.com/browse'
@@ -11,7 +12,7 @@ UTILIZED_FILE = 'utilized.txt'
 USERNAME_MAX_LENGTH = 30
 
 
-def run_concurrently_using_threads(fns_args: list[tuple[function, tuple]]):
+def run_concurrently_using_threads(fns_args: list[tuple[object, tuple]]):
   threads = []
   for fn, args in fns_args:
     threads.append(Thread(target=fn, args=args))
@@ -30,26 +31,41 @@ def check_username_availability(username):
   container = soup.find('div', {'id': 'resmes'})
   return 'is free!' in container.text
 
-
 def generate_potential_usernames():
   pass
 
-def generate_keywords(seed):
-  depth = 2 # was 3
+
+def generate_keywords_using_synonyms(seed):
+  global SYNONYMS_FILE, UTILIZED_FILE
+
+  synonyms_file = f'data/{seed}_synonyms.txt'
+  utilized_file = f'data/{seed}_utilized.txt'
+
+  if exists(synonyms_file) or exists(utilized_file):
+    print(f'Already have files for seed word: {seed}')
+    return
+
+  create_file(synonyms_file)
+  create_file(utilized_file)
+
+  SYNONYMS_FILE = synonyms_file
+  UTILIZED_FILE = utilized_file
+
+  depth = 2
   i = 0
   add_to_synonyms(seed)
 
   while i < depth:
-    fns_args = []
-    persisted_synonyms = get_from_synonyms()
+    print(f'current depth level: {i}')
 
-    for keyword in persisted_synonyms:
-      fns_args.append((find_and_add_synonyms_to_global, (keyword,)))
+    fns_args = []
+    synonyms = get_from_synonyms()
+    for synonym in synonyms:
+      fns_args.append((find_and_add_synonyms_to_global, (synonym,)))
 
     run_concurrently_using_threads(fns_args)
-    print(f'current depth level: {i}')
     i += 1
-  
+
 
 def find_and_add_synonyms_to_global(word):
   persisted_synonyms = get_from_synonyms()
@@ -86,14 +102,14 @@ def get_from_synonyms():
   return [synonym for synonym in synonyms if synonym != '']
 
 def add_to_synonyms(synonym):
-  write_to_file(synonym, SYNONYMS_FILE)
+  write_to_file(SYNONYMS_FILE, synonym)
 
 def get_from_utilized():
   data = get_from_file(UTILIZED_FILE)
   return data.split('\n')
 
 def add_to_utilized(utilized_word):
-  write_to_file(utilized_word, UTILIZED_FILE)
+  write_to_file(UTILIZED_FILE, utilized_word)
 
 def get_from_file(file):
   f = open(file, 'r')
@@ -106,13 +122,10 @@ def write_to_file(file, content):
   f.write(f'{content}\n')
   f.close()
 
-
-def generate_synonyms():
-  start = time()
-  generate_keywords('money')
-  diff = time() - start
-  print(f'ms: {diff * 1000}')
-  print(get_from_synonyms())
+def create_file(file):
+  f = open(file, 'a')
+  f.close()
+  return file
 
 def generate_unique_file():
   syns = get_from_synonyms()
@@ -122,3 +135,5 @@ def generate_unique_file():
       f.write(unique_syn)
       f.write('\n')
 
+if __name__ == '__main__':
+  generate_keywords_using_synonyms('money')
