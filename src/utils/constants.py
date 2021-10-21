@@ -4,15 +4,15 @@ USERNAME_MAX_LENGTH = 30
 # Find more: https://thegoalchaser.com/positive-words-to-describe-someone/
 ADJECTIVES = [
   'abundant',
-  'agile',
-  'ambitious',
-  'amazing',
-  'astute',
-  'balanced',
-  'brilliant',
-  'devoted',
-  'driven',
-  'exotic'
+  # 'agile',
+  # 'ambitious',
+  # 'amazing',
+  # 'astute',
+  # 'balanced',
+  # 'brilliant',
+  # 'devoted',
+  # 'driven',
+  # 'exotic'
 ]
 INVALID_USERNAME_CHARACTERS = [
   '\'',

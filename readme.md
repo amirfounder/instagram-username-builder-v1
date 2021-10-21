@@ -30,6 +30,7 @@ All of these are nice-to-haves, but not necessary for program utilization:
 - method to safe-build directory
 - gen username, delimiters before and after first and last tokens
 - parts of speech generation
+- user accepts synonyms in user_accepted.txt file for each synonym. reduce unecessary compute time for unused synonyms
 
 # Dev details
 

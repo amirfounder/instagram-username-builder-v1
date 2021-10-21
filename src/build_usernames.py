@@ -1,5 +1,5 @@
 from os import mkdir
-from src.build_keywords import build_keywords_using_synonyms, get_adjectives
+from src.build_keywords import build_adjectives, build_keywords_using_synonyms, get_adjectives
 from src.utils.utils import create_file, get_from_file, write_to_file
 from src.utils.constants import INVALID_USERNAME_CHARACTERS
 from os.path import exists
@@ -7,6 +7,7 @@ from os.path import exists
 
 
 MAX_TOKENS_IN_USERNAME = 3
+POTENTIAL_USERNAMES_PATH = None
 
 DELIMETER_STRATEGY_MAP = {
   'default': '',
@@ -51,6 +52,8 @@ LETTERING_STRATEGIES = ['default']
 
 
 def build_potenial_usernames(topic):
+  
+  global POTENTIAL_USERNAMES_PATH
 
   if not exists('data'):
     mkdir('data')
@@ -60,16 +63,19 @@ def build_potenial_usernames(topic):
 
   potential_usernames_path = f'data/usernames/{topic}.txt'
 
-  if exists(potential_usernames_path):
-    print(f'Generated usernames already exist for topic: {topic}')
-  else:
+  if not exists(potential_usernames_path):
     create_file(potential_usernames_path)
+  else:
+    print(f'Generated usernames already exist for topic: {topic}. Overriding...')
 
+  POTENTIAL_USERNAMES_PATH = potential_usernames_path
 
   potential_usernames = []
-
   synonyms = get_unique_synonyms(topic)
-  adjectives = get_adjectives()
+  try:
+    adjectives = get_adjectives()
+  except:
+    build_adjectives()
 
   # build usernames with 1 synonym
   potential_usernames.extend(synonyms)
@@ -101,10 +107,8 @@ def build_potenial_usernames(topic):
   potential_usernames.extend(local_potentials2)
   potential_usernames.extend(local_potentials3)
   
-  write_to_file(
-    potential_usernames_path,
-    '\n'.join(potential_usernames)
-  )
+  with open(potential_usernames_path, 'w') as f:
+    f.write('\n'.join(potential_usernames))
 
   return potential_usernames
 
@@ -156,6 +160,11 @@ def build_potential_usernames_combos(
           if len(potential_usernames) == round(potential_usernames_est_length / 100) * next_percentage_point:
             print(f'{next_percentage_point}% complete. ({len(potential_usernames)} usernames generated)')
             next_percentage_point += 1
+
+            with open(POTENTIAL_USERNAMES_PATH, 'w') as f:
+              f.write('\n'.join(potential_usernames))
+  
+  return potential_usernames
 
 
 def process_potential_username(potential_username: str):
