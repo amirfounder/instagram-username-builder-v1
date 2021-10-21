@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from os.path import exists, isdir
 from os import mkdir
 
-from src.utils.constants import THESAURUS_BASE_URL
+from src.utils.constants import THESAURUS_BASE_URL, ADJECTIVES
 from src.utils.utils import \
   create_file, \
     get_from_file, \
@@ -13,6 +13,20 @@ from src.utils.utils import \
 
 SYNONYMS_FILE, UTILIZED_FILE, UNIQUE_SYNONYMS_FILE = None, None, None
 
+def build_adjectives():
+  for adjective in ADJECTIVES:
+    build_keywords_using_synonyms(adjective)
+
+
+def get_adjectives():
+  all_adjectives = []
+
+  for adjective in ADJECTIVES:
+    data = get_from_file(f'data/synonyms/{adjective}/unique.txt')
+    data_as_list = data.split('\n')
+    all_adjectives.extend(data_as_list)
+  
+  return list(set(all_adjectives))
 
 
 def build_keywords_using_synonyms(seed: str):

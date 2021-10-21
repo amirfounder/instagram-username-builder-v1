@@ -28,6 +28,8 @@ All of these are nice-to-haves, but not necessary for program utilization:
 
 - logging
 - method to safe-build directory
+- gen username, delimiters before and after first and last tokens
+- parts of speech generation
 
 # Dev details
 

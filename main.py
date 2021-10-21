@@ -1,4 +1,5 @@
-from src.build_keywords import build_keywords_using_synonyms
+from src.build_usernames import build_usernames
 
 if __name__ == '__main__':
-  build_keywords_using_synonyms('great')
+  potential_usernames = build_usernames('money')
+  print(len(potential_usernames))
