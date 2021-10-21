@@ -14,3 +14,9 @@ ADJECTIVES = [
   'driven',
   'exotic'
 ]
+INVALID_USERNAME_CHARACTERS = [
+  '\'',
+  '"',
+  ',',
+  ' '
+]

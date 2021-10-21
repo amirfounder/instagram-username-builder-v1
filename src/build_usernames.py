@@ -1,6 +1,9 @@
-from src.build_keywords import build_keywords_using_synonyms, get_adjectives, get_from_synonyms
-from src.utils.utils import get_from_file
+from os import mkdir
+from src.build_keywords import build_keywords_using_synonyms, get_adjectives
+from src.utils.utils import create_file, get_from_file, write_to_file
+from src.utils.constants import INVALID_USERNAME_CHARACTERS
 from os.path import exists
+
 
 
 MAX_TOKENS_IN_USERNAME = 3
@@ -44,66 +47,125 @@ LETTERING_STRATEGY_MAP = {
   'last_token_first_letter_thrice': triple_first_char,
 }
 
-LETTERING_STRATEGIES = LETTERING_STRATEGY_MAP.keys()
+LETTERING_STRATEGIES = ['default']
 
 
-def build_usernames(topic):
+def build_potenial_usernames(topic):
+
+  if not exists('data'):
+    mkdir('data')
+
+  if not exists('data/usernames'):
+    mkdir('data/usernames')
+
+  potential_usernames_path = f'data/usernames/{topic}.txt'
+
+  if exists(potential_usernames_path):
+    print(f'Generated usernames already exist for topic: {topic}')
+  else:
+    create_file(potential_usernames_path)
+
+
   potential_usernames = []
 
   synonyms = get_unique_synonyms(topic)
   adjectives = get_adjectives()
 
   # build usernames with 1 synonym
-  # potential_usernames.extend(synonyms)
+  potential_usernames.extend(synonyms)
 
   # build usernames with 2 synonyms + all combos of delimeters, synonyms
-  # [syn] [del] [syn]
-  for synonym1 in synonyms:
-    print('syn1: {}'.format(synonym1))
-    for synonym2 in synonyms:
-      if synonym1 == synonym2: pass
-      for delimeter_strategy in DELIMETER_STRATEGIES:
-        # for lettering_strategy in LETTERING_STRATEGIES:
-          potential_username = link_two_tokens(
-            synonym1,
-            synonym2,
-            delimeter_strategy,
-            # lettering_strategy
-          )
-          if ' ' not in potential_username.strip() and '\'' not in potential_username:
-            potential_usernames.append(potential_username.strip())
-  
-  # [syn] [del] [adj]
-  for synonym in synonyms:
-    for adjective in adjectives:
-      for delimeter_strategy in DELIMETER_STRATEGIES:
-        # for lettering_strategy in LETTERING_STRATEGIES:
+  local_potentials1 = build_potential_usernames_combos(
+    synonyms,
+    synonyms,
+    DELIMETER_STRATEGIES,
+    LETTERING_STRATEGIES
+  )
+  print('Built all potential usernames with [syn][del][syn] combo')
+  local_potentials2 = build_potential_usernames_combos(
+    synonyms,
+    adjectives,
+    DELIMETER_STRATEGIES,
+    LETTERING_STRATEGIES
+  )
+  print('Built all potential usernames with [syn][del][adj] combo')
+  local_potentials3 = build_potential_usernames_combos(
+    adjectives,
+    synonyms,
+    DELIMETER_STRATEGIES,
+    LETTERING_STRATEGIES
+  )
+  print('Built all potential usernames with [adj][del][syn] combo')
 
-          potential_username1 = link_two_tokens(
-            synonym,
-            adjective,
-            delimeter_strategy,
-            # lettering_strategy
-          )
-          potential_username2 = link_two_tokens(
-            adjective,
-            synonym,
-            delimeter_strategy,
-            # lettering_strategy
-          )
-
-          potential_usernames.append(potential_username1)
-          potential_usernames.append(potential_username2)
+  potential_usernames.extend(local_potentials1)
+  potential_usernames.extend(local_potentials2)
+  potential_usernames.extend(local_potentials3)
   
+  write_to_file(
+    potential_usernames_path,
+    '\n'.join(potential_usernames)
+  )
+
   return potential_usernames
 
-  # Coming soon
+  # TODO
   # build usernames with 3 synonyms + all combos of delimeters, synonyms
     # syn [del] syn [del] syn
     # syn [del] syn [del] adj
     # syn [del] adj [del] syn
     # adj [del] syn [del] syn
-  pass
+
+
+def build_potential_usernames_combos(
+    token_list1,
+    token_list2,
+    delimeter_strategies=['default'],
+    lettering_strategies=['default']
+  ):
+  potential_usernames = []
+
+  potential_usernames_est_length = \
+    len(token_list1) * \
+      len(token_list2) * \
+        len(delimeter_strategies) * \
+          len(lettering_strategies)
+  
+  print(f'est. potential usernames: {potential_usernames_est_length}')
+  next_percentage_point = 1
+
+  for token1 in token_list1:
+    for token2 in token_list2:
+      if token1 == token2:
+        continue
+      for delimeter_strategy in delimeter_strategies:
+        for lettering_strategy in lettering_strategies:
+
+          potential_username = link_two_tokens(
+            token1,
+            token2,
+            delimiter_strategy=delimeter_strategy,
+            lettering_strategy=lettering_strategy
+          )
+
+          processed_potential_username = process_potential_username(potential_username)
+
+          if processed_potential_username is not None \
+            and processed_potential_username not in potential_usernames:
+              potential_usernames.append(processed_potential_username)
+          
+          if len(potential_usernames) == round(potential_usernames_est_length / 100) * next_percentage_point:
+            print(f'{next_percentage_point}% complete. ({len(potential_usernames)} usernames generated)')
+            next_percentage_point += 1
+
+
+def process_potential_username(potential_username: str):
+  stripped_username = potential_username.strip()
+  
+  for invalid_username_character in INVALID_USERNAME_CHARACTERS:
+    if invalid_username_character in stripped_username:
+      return None
+  
+  return stripped_username
 
 
 def link_two_tokens(

@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from os.path import exists, isdir
 from os import mkdir
 
-from src.utils.constants import THESAURUS_BASE_URL, ADJECTIVES
+from src.utils.constants import INVALID_USERNAME_CHARACTERS, THESAURUS_BASE_URL, ADJECTIVES
 from src.utils.utils import \
   create_file, \
     get_from_file, \
@@ -86,11 +86,20 @@ def find_and_write_synonyms_to_file(word):
   persisted_synonyms = get_from_synonyms()
   local_synonyms = find_synonyms(word)
   for local_synonym in local_synonyms:
-    if local_synonym not in persisted_synonyms:
-      add_to_synonyms(local_synonym)
+
+    stripped = local_synonym.strip()
+    if stripped not in persisted_synonyms and is_valid_synonym(stripped):
+      add_to_synonyms(stripped)
 
 
-def find_synonyms(word):
+def is_valid_synonym(synonym):
+  for invalid_character in INVALID_USERNAME_CHARACTERS:
+    if invalid_character in synonym:
+      return False
+  return True
+
+
+def find_synonyms(word) -> list[str]:
   global requests_made
   utilized = get_from_utilized()
   if word not in utilized:
